@@ -7,12 +7,12 @@ var car = {
             callback(res);
         });
     },
-    insertOne: function (cols, vals, callback) {
+    create: function (cols, vals, callback) {
         orm.insertOne("cars", cols, vals, function (res) {
             callback(res);
         });
     },
-    updateOne: function (objColVals, condition,callback){
+    update: function (objColVals, condition,callback){
         orm.updateOne("cars",objColVals,condition,function(res){
             callback(res);
         })
