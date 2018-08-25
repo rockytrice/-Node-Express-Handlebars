@@ -3,7 +3,7 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model (car.js) to use its database functions.
-var cat = require("../models/car.js");
+var car = require("../models/car.js");
 
 // creating the routes and setting up logic
 // route for selectAll======================================================================================
@@ -39,3 +39,5 @@ router.put("/api/cars/id", function (req, res) {
         }
     });
 });
+// Exports routes to server.js to use.
+module.exports = router;
