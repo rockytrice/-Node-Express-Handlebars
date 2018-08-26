@@ -1,0 +1,19 @@
+.jumbotron{
+text-align: center;
+background-color: transparent;
+}
+li{
+    list-style: none;
+}
+.btn:not(:disabled):not(.disabled) {
+    margin-top: 6px;
+}
+body{
+    background-image: url('https://www.quartoknows.com/blog/wp-content/uploads/2015/09/Top-Muscle_page6_image7.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+h1{
+    color: yellow;
+}

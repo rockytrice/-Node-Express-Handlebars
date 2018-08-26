@@ -19,7 +19,7 @@ router.get("/", function (req, res) {
 // insertOne route==========================================================================================================
 
 router.post("/api/cars", function (req, res) {
-    car.create(["car_name"], [req.body.name, req.body.purchased], function (result) {
+    car.create(["car_name"], [req.body.name,], function (result) {
         res.json({
             id: result.insertId
         });

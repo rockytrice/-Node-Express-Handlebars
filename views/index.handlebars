@@ -1,35 +1,49 @@
-<h1> Dream Muscle Cars!!</h1>
 
-<h2>Muscle cars that have not been purchased!</h2>
-
-<ul>
-
-  {{#each cars}} {{#unless purchased}}
-  <li>
-    {{car_name}}
-  </li>
-  {{> cars/car-block purchase=true}} {{/unless}} {{/each}}
+<div class="jumbotron">
+  <h1 class="display-4">Dream Muscle Cars!!</h1>
+  <hr class="my-4">
+</div>
 
 
 
-</ul>
+<div class="container1">
 
-<h2>Muscle cars that have been purchased!</h2>
+  <div class="row">
+    <div class="col-md-6">
+        <h2>Wish List!</h2>
 
-<ul>
+      <ul>
+        <li>
+          {{#each cars}} {{#unless purchased}} {{> cars/car-block purchase=true}} {{car_name}}{{/unless}} {{/each}}
 
-  {{#each cars}} {{#if purchased}}
-  <li>
-    {{car_name}} {{> cars/car-block purchase=false}}
-  </li>
-  {{/if}} {{/each}}
+        </li>
 
-</ul>
+      </ul>
 
-<h2>Add Your dream Muscle Car</h2>
+    </div>
+
+
+    <div class="col-md-6">
+            <h2>Purchased Cars</h2>
+
+      <ul>
+        <li>
+          {{#each cars}}  {{#if purchased}} {{> cars/car-block purchase=false}}{{car_name}} {{/if}} {{/each}}
+
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
 <form class="create-form">
 
   <div class="form-group">
+    <h2>Add Your dream Muscle Car</h2>
+
     <label for="ca">Car Name:</label>
     <input type="text" id="ca" name="name">
   </div>
