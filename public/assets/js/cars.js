@@ -19,6 +19,7 @@ $(function () {
                 location.reload();
             }
         );
+        $('.cars-bought').addClass('animated rubberBand');
     });
 
     $(".create-form").on("submit", function(event) {
@@ -41,5 +42,7 @@ $(function () {
             location.reload();
           }
         );
+       
+        $('.dream-list').addClass('animated rubberBand');
       });
 })
