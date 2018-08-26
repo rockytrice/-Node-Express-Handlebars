@@ -3,21 +3,27 @@
 <h2>Muscle cars that have not been purchased!</h2>
 
 <ul>
-  {{#each cars}}
-    {{#unless purchased}}
-      {{> cars/car-block purchase=true}}
-    {{/unless}}
-  {{/each}}
+
+  {{#each cars}} {{#unless purchased}}
+  <li>
+    {{car_name}}
+  </li>
+  {{> cars/car-block purchase=true}} {{/unless}} {{/each}}
+
+
+
 </ul>
 
 <h2>Muscle cars that have been purchased!</h2>
 
 <ul>
-  {{#each cars}}
-    {{#if purchased}}
-      {{> cars/car-block purchase=false}}
-    {{/if}}
-  {{/each}}
+
+  {{#each cars}} {{#if purchased}}
+  <li>
+    {{car_name}} {{> cars/car-block purchase=false}}
+  </li>
+  {{/if}} {{/each}}
+
 </ul>
 
 <h2>Add Your dream Muscle Car</h2>
@@ -28,7 +34,7 @@
     <input type="text" id="ca" name="name">
   </div>
 
-  
+
 
   <button type="submit">Add Car</button>
 </form>
