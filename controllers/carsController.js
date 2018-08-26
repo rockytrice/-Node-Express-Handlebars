@@ -8,7 +8,7 @@ var car = require("../models/car.js");
 // creating the routes and setting up logic
 // route for selectAll======================================================================================
 router.get("/", function (req, res) {
-    car.selectAll(function (data) {
+    car.select(function (data) {
         var hbsObject = {
             cars: data
         };
@@ -19,15 +19,15 @@ router.get("/", function (req, res) {
 // insertOne route==========================================================================================================
 
 router.post("/api/cars", function (req, res) {
-    car.create(["name", "purchased"], [req.body.purchased], function (result) {
+    car.create(["car_name"], [req.body.name, req.body.purchased], function (result) {
         res.json({
             id: result.insertId
         });
     });
 });
 // updateOne route===========================================================================================
-router.put("/api/cars/id", function (req, res) {
-    var condition = "id =" + req.params.id;
+router.put("/api/cars/:id", function (req, res) {
+    var condition = "id = " + req.params.id;
     console.log("condition", condition);
     car.update({
         purchased: req.body.purchased

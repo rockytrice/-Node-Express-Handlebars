@@ -2,7 +2,7 @@
 var orm = require("../config/orm.js");
 
 var car = {
-    selectAll: function (callback) {
+    select: function (callback) {
         orm.selectAll("cars", function (res) {
             callback(res);
         });
