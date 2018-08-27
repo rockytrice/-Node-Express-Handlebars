@@ -13,8 +13,9 @@ background-color: transparent;
 li{
     list-style: none;
     font-family: 'Black Ops One', cursive;
-    font-size: 19px;
+    font-size: 23px;
     color: red;
+    text-shadow: 2px 2px #ffcc00;
 }
 .btn:not(:disabled):not(.disabled) {
     margin-top: 6px;
@@ -51,7 +52,7 @@ form{
     color: #ffcc00;
     font-size: 40px;
     text-align: center;
-    margin-left: -292px;
+    margin-left: -126px;
 }
 .form-head{
     margin-left: -464px;
@@ -68,4 +69,7 @@ form{
     color: white;
     font-family: 'Black Ops One', cursive;
     margin-bottom: 8px;
+}
+.container1{
+    margin-left: -176px;
 }
