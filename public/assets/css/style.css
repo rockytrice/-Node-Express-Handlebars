@@ -46,6 +46,7 @@ form{
     font-size: 40px;
     text-align: center;
     margin-left: -293px;
+    text-shadow: 2px 2px RED;
 }
 .cars-bought{
     font-family: 'Faster One', cursive;
@@ -53,6 +54,7 @@ form{
     font-size: 40px;
     text-align: center;
     margin-left: -126px;
+    text-shadow: 2px 2px RED;
 }
 .form-head{
     margin-left: -464px;
