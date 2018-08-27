@@ -28,7 +28,6 @@ $(function () {
     
         var newCar = {
           name: $("#ca").val().trim(),
-        //   purchased: $("[name=purchased]").val().trim()
         };
     
         // Send the POST request.
